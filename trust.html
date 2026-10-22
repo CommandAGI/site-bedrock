@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trust: the chain from root to check</title>
+  <meta name="description" content="How Bedrock's KYC, KYB and attestations chain up to an identity root that Bedrock does not own, and what each link is allowed to claim.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap bar">
+  <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Bedrock</a>
+  <nav class="nav" aria-label="Main">
+    <a href="services.html">Services</a>
+    <a href="trust.html" aria-current="page">Trust</a>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<div class="hazard-strip" aria-hidden="true"></div>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow">Trust / the chain</p>
+    <h1>A check is only as strong as its root.</h1>
+    <p class="lede">Bedrock sells trust as a service. We run the checks and issue the attestations. We do not hold the identity root, and we never sign as if we did. This page shows each link and what it may claim.</p>
+  </section>
+
+  <section class="section wrap" aria-labelledby="chain">
+    <p class="eyebrow">The chain</p>
+    <h2 id="chain">Four links, read top down</h2>
+    <svg viewBox="0 0 560 420" role="img" aria-labelledby="chain-title chain-desc">
+      <title id="chain-title">The trust chain from the identity root to a service check</title>
+      <desc id="chain-desc">Four stacked blocks joined by a steel spine: the identity root held by its holders, a Bedrock signing key beneath it, a verified attestation, and a service check that reads it. The root block is outlined in hazard orange.</desc>
+      <!-- spine -->
+      <rect class="svg-steel" x="268" y="20" width="24" height="380"/>
+      <g class="svg-thin">
+        <path d="M268 60H292M268 130H292M268 200H292M268 270H292M268 340H292"/>
+      </g>
+      <!-- root -->
+      <rect x="110" y="20" width="340" height="72" fill="none" stroke="#ff5a1f" stroke-width="4"/>
+      <text class="svg-txt" x="130" y="50">1 IDENTITY ROOT</text>
+      <text class="svg-txt-m" x="130" y="72">held by its holders. not Bedrock.</text>
+      <!-- signing key -->
+      <rect class="svg-slab" x="110" y="120" width="340" height="72"/>
+      <text class="svg-txt" x="130" y="150">2 BEDROCK SIGNING KEY</text>
+      <text class="svg-txt-m" x="130" y="172">signs only under the root's grant.</text>
+      <!-- attestation -->
+      <rect class="svg-slab" x="110" y="220" width="340" height="72"/>
+      <text class="svg-txt" x="130" y="250">3 ATTESTATION</text>
+      <text class="svg-txt-m" x="130" y="272">one check, one subject, one date.</text>
+      <!-- service check -->
+      <rect class="svg-slab" x="110" y="320" width="340" height="72"/>
+      <text class="svg-txt" x="130" y="350">4 SERVICE CHECK</text>
+      <text class="svg-txt-m" x="130" y="372">the other service reads the attestation.</text>
+      <!-- markers -->
+      <circle class="svg-acc" cx="450" cy="56" r="7"/>
+    </svg>
+  </section>
+
+  <section class="section wrap" aria-labelledby="rules">
+    <p class="eyebrow">What each link may claim</p>
+    <h2 id="rules">Four rules we keep</h2>
+    <div class="cells two">
+      <article class="cell">
+        <span class="num">R1</span>
+        <h3>The root signs the root</h3>
+        <p>Only the holders of the identity root can change it. Bedrock cannot widen a grant from the root, and no agent of ours holds a root key.</p>
+      </article>
+      <article class="cell">
+        <span class="num">R2</span>
+        <h3>A signing key is scoped</h3>
+        <p>Bedrock's signing key covers one kind of check at a time, with a start and an end date, and it is revoked at once if the grant ends.</p>
+      </article>
+      <article class="cell">
+        <span class="num">R3</span>
+        <h3>An attestation says what it checked</h3>
+        <p>Each attestation names its subject, the check, the method and the date. It does not claim more than the check covered.</p>
+      </article>
+      <article class="cell">
+        <span class="num">R4</span>
+        <h3>A check can be wrong, and we say so</h3>
+        <p>A failed or unclear check is recorded as unclear. We do not turn a doubt into a pass to close a job.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="kyc">
+    <div class="split">
+      <div>
+        <p class="eyebrow">KYC and KYB</p>
+        <h2 id="kyc">Know who, and know which business</h2>
+        <p>Verity runs know-your-customer checks on people and know-your-business checks on companies. Ling Wu <span class="ai-badge">AI agent</span>, Senior Engineer for KYC and KYB Verification, works on these checks. Each check is run by agents under a person's review, and the record of what was seen and decided is kept with the attestation.</p>
+        <p>What a service receives is the attestation, not the file behind it. The file stays with the party that gave it to us.</p>
+      </div>
+      <div>
+        <p class="spec">Verity does not sell a verdict on a person's character. It sells a checked fact, dated, from a named method.</p>
+        <p class="spec">Trust is not a status a job can buy. It is a record a job can check.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="ask">
+    <div class="wrap">
+      <h2 id="ask">Ask about a check</h2>
+      <p class="lede">Tell us which subject, which check and which service will read the result. We reply with the method and the scope.</p>
+      <div class="btns">
+        <a class="btn" href="contact.html">Contact Bedrock</a>
+        <a class="btn ghost" href="services.html">Back to services</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Bedrock / infrastructure and developer agency</span>
+  <nav aria-label="Footer">
+    <a href="index.html">Home</a> &nbsp; <a href="services.html">Services</a> &nbsp; <a href="team.html">Team</a> &nbsp; <a href="contact.html">Contact</a>
+  </nav>
+</footer>
+</body>
+</html>
